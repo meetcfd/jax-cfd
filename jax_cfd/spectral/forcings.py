@@ -36,7 +36,7 @@ def random_forcing_module(grid: grids.Grid,
   amplitude = jax.random.uniform(subkey, minval=-0.5, maxval=0.5, shape=(n,))
 
   key, subkey = jax.random.split(key)
-  omega = jax.random.uniform(subkey, minval=-0.4, maxval=0.4, shape=(n,))
+  omega = jax.random.uniform(subkey, minval=-2.0, maxval=2.0, shape=(n,))
 
   key, subkey = jax.random.split(key)
   phi = jax.random.uniform(subkey, minval=0, maxval=2 * jnp.pi, shape=(n,))
